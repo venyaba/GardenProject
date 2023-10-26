@@ -1,0 +1,23 @@
+.navigation{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    color: black;
+   
+}
+
+.navigation img{
+    width: 30px;
+    height: 30px;
+}
+
+.navigation a{
+        color: #000000;
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+
+      .navigation a.active {
+        color: #339933;
+    }
