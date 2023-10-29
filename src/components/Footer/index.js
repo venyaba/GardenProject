@@ -1,6 +1,8 @@
-
+import ContactsSection from "../ContactsSection";
 const Footer = ()=>{
-    return <div>Footer</div>
+    return <div>
+        <ContactsSection/>
+    </div>
 }
 
 export default Footer;

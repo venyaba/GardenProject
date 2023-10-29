@@ -1,22 +1,54 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 import { fetchAllProducts } from "../../core/redux/store/slices/productsSlaces";
+import { discontProductsFilter } from "../../utils";
+import Product from "../Product";
+import { Loader } from "../../UI/Loader";
+import { ErrorNotification } from "../../UI/ErrorNotification";
+import styles from "./SaleSection.module.css";
 
-const SaleSection = () =>{
-    const { products, status, error } = useSelector(
-        (state) => state.productsState
-      );
-      const dispatch = useDispatch()
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-      const discountProducts = products?.filter((product)=>product.discount_price)
-    useEffect(()=>{
-        dispatch(fetchAllProducts())
-       
-    },[])
-    console.log("discountProducts",discountProducts)
-    return<div>
-{products?.filter((product)=>product.discont_price).map(prod=>(<div>{prod.title}</div>))}
+const SaleSection = () => {
+  const { products, status, error } = useSelector(
+    (state) => state.productsState
+  );
+ 
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAllProducts());
+  }, []);
+
+  return (
+    <div className="wrapper">
+      <div className={styles.sale_container}>
+        <h3>Sale</h3>
+        <Swiper
+          spaceBetween={32}
+          slidesPerView={4}
+          modules={[Navigation, Pagination]}
+          className="mySwiper"
+        >
+          {status === "pending" ? (
+            <Loader loaderClass={styles.loader} />
+          ) : (
+            discontProductsFilter(products).map((product) => (
+              <SwiperSlide key={product.id}>
+                <Product {...product}/>
+              </SwiperSlide>
+            ))
+          )}
+
+          {error && <ErrorNotification />}
+        </Swiper>
+      </div>
     </div>
-}
+  );
+};
 
 export default SaleSection;
