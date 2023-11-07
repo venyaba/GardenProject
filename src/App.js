@@ -4,6 +4,7 @@ import CategoryPage from "./pages/CategoryPage";
 import MainPage from "./pages/MainPage/index.js";
 import NotFoundPage from "./pages/NotFoundPage";
 import Layout from "./components/Layout/Layout";
+import ProductsByCategoryPage from "./pages/ProductsByCategoryPage";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
           <Route path="/category" element={<CategoryPage />} />
+          <Route path='/category/:categoryId' element={<ProductsByCategoryPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

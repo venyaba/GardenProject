@@ -13,6 +13,7 @@ export const fetchCategories = createAsyncThunk(
       }
 
       const data = await response.json();
+
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -39,7 +40,7 @@ const catecoriesSlice = createSlice({
         },
         [fetchCategories.fulfilled]: (state,action)=>{
             state.status = "resolved"
-            state.categories = action.payload
+            state.categories = action.payload 
         },
         [fetchCategories.rejected]: (state,action)=>{
             state.status = "rejected"

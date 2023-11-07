@@ -1,7 +1,7 @@
 import { getDiscont } from "../../utils";
 import styles from "./Product.module.css";
 
-const Product = ({ discont_price, price, image, title }) => {
+const Product = ({ discont_price, price, image, title}) => {
   const hasDiscont = discont_price;
   const percent = getDiscont(discont_price, price);
 
@@ -19,7 +19,7 @@ const Product = ({ discont_price, price, image, title }) => {
           <span>{price}$</span>
           {hasDiscont && <span>{percent}</span>}
         </div>
-        <span>{title}</span>
+        <span className={styles.product_title}>{title}</span>
       </div>
     </div>
   );

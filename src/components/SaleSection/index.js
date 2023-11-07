@@ -35,7 +35,7 @@ const SaleSection = () => {
           className="mySwiper"
         >
           {status === "pending" ? (
-            <Loader loaderClass={styles.loader} />
+            <Loader/>
           ) : (
             discontProductsFilter(products).map((product) => (
               <SwiperSlide key={product.id}>

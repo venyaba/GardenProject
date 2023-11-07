@@ -36,9 +36,9 @@ const CategoryContainer = () => {
           className="mySwiper"
         >
           {status === "loading" ? (
-            <Loader loaderClass={styles.loader} />
+            <Loader  />
           ) : (
-            categories?.map((category) => (
+            categories.map((category) => (
               <SwiperSlide key={category.id}>
                 <CategoryItem {...category} />
               </SwiperSlide>
