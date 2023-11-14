@@ -4,7 +4,7 @@ import styles from './DiscountSection.module.css'
 
 const DiscountSection = () => {
   return (
-    <div className={styles.discount_wrapper}>
+    <div className={`${styles.discount_wrapper} wrapper`}>
       <img src={discountImg} />
       <div className={styles.discount_info}>
         <h3>5% off</h3>

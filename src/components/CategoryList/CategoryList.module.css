@@ -1,0 +1,10 @@
+.category_list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
+}
+
+.category_list >.category{
+    width: 30%;
+    background-color: red;
+}

@@ -1,13 +1,15 @@
+import { useNavigate } from "react-router";
 import { getDiscont } from "../../utils";
 import styles from "./Product.module.css";
 
-const Product = ({ discont_price, price, image, title}) => {
+const Product = ({ discont_price, price, image, title, id}) => {
   const hasDiscont = discont_price;
   const percent = getDiscont(discont_price, price);
+  const navigate = useNavigate()
 
 
   return (
-    <div div className={styles.product}>
+    <div className={styles.product} onClick={()=>navigate(`/products/${id}`)}>
       <img
         className={styles.product_img}
         src={`${process.env.REACT_APP_ENDPOINT_URL}/${image}`}

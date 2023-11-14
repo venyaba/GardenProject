@@ -4,7 +4,7 @@ import styles from "./Promotion.module.css";
 
 const Promotion = () => {
   return (
-    <div className={styles.promo_wrapper}>
+    <div className={`${styles.promo_wrapper} wrapper`}>
       
         <div className={styles.promo}>
           <div className={styles.promo_title}>

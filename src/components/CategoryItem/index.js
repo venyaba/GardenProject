@@ -1,11 +1,11 @@
-import { useLocation, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 import styles from './CategoryItem.module.css'
 
 const CategoryItem = ({image, title, id})=>{
 const navigate = useNavigate()
 
 
-return <div className={styles.category} onClick={()=>navigate(`category/${id}`)}>
+return <div className={styles.category} onClick={()=>navigate(`/category/${id}`)}>
 <img src={`${process.env.REACT_APP_ENDPOINT_URL}/${image}`}/>
 <span>{title}</span>
 </div>

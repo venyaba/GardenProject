@@ -1,5 +1,6 @@
 .product{
   flex-basis: 24%;
+  cursor: pointer;;
 }
 
 .product_img {

@@ -15,7 +15,7 @@ import "swiper/css/pagination";
 
 const SaleSection = () => {
   const { products, status, error } = useSelector(
-    (state) => state.productsState
+    (state) => state.products
   );
  
   const dispatch = useDispatch();

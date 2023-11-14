@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import Logo from "../Logo";
-import CatalogButton from "../../UI/button";
+import CustomButton from "../../UI/CustomButton";
 import Navigation from "../Navigation";
 import styles from "./Header.module.css";
 import cart from "../../assets/cart/cart.png";
@@ -13,7 +13,7 @@ const Header = () => {
         <div className={styles.header}>
           <div className={styles.header_logo}>
             <Logo />
-            <CatalogButton />
+            <CustomButton title="Catalog" />
           </div>
           <div className={styles.header_nav}>
             <Navigation />
