@@ -11,9 +11,9 @@ const Promotion = () => {
             <h1>Sale</h1>
             <h2>New season</h2>
 
-            <Link to="/sales" className={styles.promo_btn}>
+            <a href = "#sales" className={styles.promo_btn}>
               Sale
-            </Link>
+            </a>
           </div>
 
           <div className={styles.promo_img}></div>

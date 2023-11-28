@@ -44,3 +44,10 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.promo_title a:hover {
+  color: #ffff;
+  background-color: #339933;
+  transition: all 500ms;
+  cursor: pointer;
+}

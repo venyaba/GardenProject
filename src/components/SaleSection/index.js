@@ -27,7 +27,7 @@ const SaleSection = () => {
   return (
     <div className="wrapper">
       <div className={styles.sale_container}>
-        <h3>Sale</h3>
+        <h3 id="sales">Sale</h3>
         <Swiper
           spaceBetween={32}
           slidesPerView={4}

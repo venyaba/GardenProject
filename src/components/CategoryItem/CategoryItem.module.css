@@ -6,11 +6,12 @@
   gap: 20px;
   color: black;
   cursor: pointer;
+
 }
 
 .category img {
   width: 100%;
-  height: 200px;
+  height: 200px; 
   object-fit: cover;
   filter: grayscale(0%);
   filter: gray;
@@ -22,7 +23,7 @@
 .category img:hover {
   filter: grayscale(80%);
   -webkit-filter: grayscale(80%);
-  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .category span {

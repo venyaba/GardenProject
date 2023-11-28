@@ -1,0 +1,35 @@
+.order_container {
+  border: 2px solid #393;
+  border-radius: 20px;
+  padding: 25px;
+  flex-grow: 0;
+}
+
+.order_container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order_total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.order_total span:last-child {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+
+.order_container input{
+    min-width: 300px
+}
+.order_container input:last-child:hover {
+  background-color: #fff;
+  border: 1px solid #393;
+  color: #393;
+  transition: 500ms;
+  cursor: pointer;
+}

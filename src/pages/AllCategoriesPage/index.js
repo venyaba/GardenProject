@@ -6,8 +6,7 @@ import { fetchCategories } from "../../core/redux/store/slices/categoriesSlices"
 import { ErrorNotification } from "../../UI/ErrorNotification";
 import CategoryList from "../../components/CategoryList";
 
-import styles from './AllCategoriesPage.module.css'
-import CategoryContainer from "../../components/CategoryContainer";
+import styles from "./AllCategoriesPage.module.css";
 
 const AllCategoriesPage = () => {
   const { categories, categoriesStatus, categoriesError } = useSelector(
@@ -22,9 +21,12 @@ const AllCategoriesPage = () => {
     <div className={`${styles.categoriesMain_page} wrapper`}>
       <h3>All categories: </h3>
 
-      
-      {/* <CategoryContainer/> */}
-      <CategoryList categories={categories}/>
+      {categoriesStatus === "pending" ? (
+        <Loader />
+      ) : (
+        <CategoryList categories={categories} />
+      )}
+      {categoriesError && <ErrorNotification/>}
     </div>
   );
 };

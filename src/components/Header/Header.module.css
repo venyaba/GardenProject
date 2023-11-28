@@ -24,11 +24,23 @@
 
 .header_cart {
   margin-left: 100px;
+  position: relative;
 }
 
-.header button{
+.header button {
   font-size: 16px;
   text-transform: capitalize;
   background-color: #339933;
-  
+}
+
+.header_cart span {
+  background-color: #339933;
+  color: #fff;
+  position: absolute;
+  right: 16px;
+  top: 0px;
+  padding: 4px 8px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 600;
 }

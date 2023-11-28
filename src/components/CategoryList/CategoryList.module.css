@@ -1,10 +1,7 @@
 .category_list{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px
+    gap: 20px;
+    justify-content: space-between;
 }
 
-.category_list >.category{
-    width: 30%;
-    background-color: red;
-}

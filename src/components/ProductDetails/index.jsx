@@ -1,7 +1,11 @@
+import { useDispatch } from "react-redux";
 import { getDiscont } from "../../utils";
 import  CustomButton from '../../UI/CustomButton'
+import { addToCart } from "../../core/redux/store/slices/cartSlices";
 
 import styles from './ProductDetails.module.css'
+
+
 
 const ProductDetails = ({
   title,
@@ -9,7 +13,10 @@ const ProductDetails = ({
   discont_price,
   image,
   description,
+  id
 }) => {
+
+    const dispatch = useDispatch()
   const hasDiscont = discont_price;
   const percent = getDiscont(discont_price, price);
   return (
@@ -32,6 +39,7 @@ const ProductDetails = ({
             title="To cart"
             size="large"
             style={{ width: "40%" }}
+            handleClick={()=>dispatch(addToCart({title,price,discont_price,image,id}))}
           />
           <hr/>
           <span>Description</span>

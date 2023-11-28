@@ -1,5 +1,6 @@
 import discountImg from '../../assets/discount/discount.png'
 import styles from './DiscountSection.module.css'
+import PhoneForm from '../PhoneForm';
 
 
 const DiscountSection = () => {
@@ -9,10 +10,9 @@ const DiscountSection = () => {
       <div className={styles.discount_info}>
         <h3>5% off</h3>
         <h4>on the first order</h4>
-        <div className={styles.discount_input}>
-        <input type="text" placeholder="+49"/>
-        <button>Get a discount</button>
-        </div>
+       
+        <PhoneForm textButton='Get a discount' inputName='discount'/>
+      
        
       </div>
     </div>
