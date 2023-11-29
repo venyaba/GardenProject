@@ -44,3 +44,9 @@
   font-size: 10px;
   font-weight: 600;
 }
+
+@media(max-width:480px){
+  .header{
+    padding: 10px;
+  }
+}

@@ -5,41 +5,44 @@
 .promo {
   display: flex;
   justify-content: space-between;
-  padding: 76px 0 20px 20px;
+  padding: 76px 0 80px 20px;
 }
 
+
 .promo_title {
-  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .promo h1,
 h2 {
   color: #ffff;
   font-weight: 700;
-  font-size: 80px;
+  font-size: 5.833em;
 }
 
 .promo h2 {
   font-size: 63px;
-  margin-bottom: 60px;
+  
 }
 
 .promo_btn {
   color: black;
   background-color: #ffff;
-  margin-top: 85px;
   padding: 25px 50px;
   border-radius: 13px;
   border: none;
   font-weight: 700;
   font-size: 25px;
   cursor: pointer;
+  align-self: self-start;
 }
 
 .promo_img {
   background-image: url("../../assets/promotion/promo.png");
-  width: 640px;
-  height: 550px;
+  width: 45%;
+  height: auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -50,4 +53,26 @@ h2 {
   background-color: #339933;
   transition: all 500ms;
   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .promo {
+    padding: 40px 20px;
+  }
+  .promo_title {
+    margin-top: 0;
+  }
+  .promo_title h1,h2 {
+    font-size: 40px;
+  }
+
+  .promo_title h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .promo_btn{
+    font-size: 15px;
+    padding: 10px 15px;
+  }
 }

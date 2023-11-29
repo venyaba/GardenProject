@@ -25,34 +25,42 @@ const CategoryContainer = () => {
     dispatch(fetchCategories());
   }, [dispatch]);
   return (
-    <div className="wrapper">
-      <div className={styles.categories_wrapper}>
-        <div className={styles.categories_title}>
-          <h3 id="catalog">Catalog</h3>
-          <CustomButton
-            title="All categories"
-            handleClick={() => navigate("/categories/all")}
-          />
-        </div>
-        <Swiper
-          spaceBetween={32}
-          slidesPerView={4}
-          modules={[Navigation, Pagination]}
-          className="mySwiper"
-        >
-          {categoriesStatus === "pending" ? (
-            <Loader />
-          ) : (
-            categories.map((category) => (
-              <SwiperSlide key={category.id}>
-                <CategoryItem {...category} />
-              </SwiperSlide>
-            ))
-          )}
-
-          {categoriesError && <ErrorNotification />}
-        </Swiper>
+    <div className={`${styles.categories_wrapper} wrapper`}>
+      <div className={styles.categories_title}>
+        <h3 id="catalog">Catalog</h3>
+        <CustomButton
+          title="All categories"
+          handleClick={() => navigate("/categories/all")}
+        />
       </div>
+      <Swiper
+        spaceBetween={32}
+        breakpoints={{
+          280: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          }
+        }}
+        slidesPerView={4}
+        modules={[Navigation, Pagination]}
+        className="mySwiper"
+      >
+        {categoriesStatus === "pending" ? (
+          <Loader />
+        ) : (
+          categories.map((category) => (
+            <SwiperSlide key={category.id}>
+              <CategoryItem {...category} />
+            </SwiperSlide>
+          ))
+        )}
+
+        {categoriesError && <ErrorNotification />}
+      </Swiper>
     </div>
   );
 };

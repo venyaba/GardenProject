@@ -44,3 +44,31 @@
 .insta_icon img, .whatsapp_icon img{
 margin-bottom: 8px;
 }
+
+@media (max-width: 480px){
+  .contacts{
+      flex-direction: column;
+      align-items: center;
+      gap:20px;
+  }
+
+  .contacts h3 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .contacts_info:first-child > span {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .address_info span:nth-child(2) {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .contacts_icon {
+    display: flex;
+    gap: 20px;
+  }
+}

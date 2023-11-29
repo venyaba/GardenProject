@@ -4,7 +4,6 @@
   left: 0;
   font-size: 14px;
   color: #000;
-  margin: 0;
   padding: 40px 0 50px;
 }
 
@@ -25,7 +24,7 @@
   cursor: pointer;
 }
 
-.categories_title button:hover{
+.categories_title button:hover {
   color: #fff;
   background-color: #8b8b8b;
   transition: all 500ms;
@@ -56,3 +55,8 @@
   object-fit: cover;
 }
 
+@media (max-width: 480px){
+  .categories_title{
+      padding: 20px;
+  }
+}

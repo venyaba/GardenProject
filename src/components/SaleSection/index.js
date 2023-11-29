@@ -33,6 +33,24 @@ const SaleSection = () => {
           slidesPerView={4}
           modules={[Navigation, Pagination]}
           className="mySwiper"
+          breakpoints={{
+            280: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            1100: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1400: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+          }}
         >
           {status === "pending" ? (
             <Loader/>

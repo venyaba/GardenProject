@@ -40,7 +40,7 @@ const Product = ({ discont_price, price, image, title, id }) => {
       </div>
       {isHoveredButton && (
         <CustomButton title="Add to cart" handleClick={(e) => handleAddToCart(e)} />
-      )}
+       )}
     </div>
   );
 };

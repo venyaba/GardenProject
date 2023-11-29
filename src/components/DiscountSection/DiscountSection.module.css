@@ -6,9 +6,15 @@
   padding: 3rem 9rem;
 }
 
+@media(max-width: 480px){
+  .discount_wrapper{
+    padding: 20px 20px 40px
+  }
+}
+
 .discount_wrapper img{
   height: auto;
-  width: 100%;
+  width: 50%;
 }
 
 .discount_info h3,
@@ -16,7 +22,16 @@ h4 {
   font-size: 90px;
   color: #ffff;
 }
+@media (max-width:480px){
+  .discount_info h4 {
+    font-size: 20px;
+  }
+}
 .discount_info h4 {
   font-size: 50px;
   margin-bottom: 46px;
+}
+
+.discount_info{
+  width: 50%;
 }

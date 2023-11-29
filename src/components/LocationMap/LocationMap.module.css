@@ -7,3 +7,9 @@
     height: auto;
     display: block;
 }
+
+@media(max-width: 480px){
+    .location{
+        padding: 20px;
+    }
+}

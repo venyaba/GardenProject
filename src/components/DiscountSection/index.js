@@ -10,10 +10,7 @@ const DiscountSection = () => {
       <div className={styles.discount_info}>
         <h3>5% off</h3>
         <h4>on the first order</h4>
-       
         <PhoneForm textButton='Get a discount' inputName='discount'/>
-      
-       
       </div>
     </div>
   );
