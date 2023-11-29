@@ -5,7 +5,7 @@
   gap: 20px;
   border-top: 1px solid #8b8b8b;
   padding: 20px 0;
-  width: 100%;
+ 
 
 }
 .cartItem:last-child{
@@ -61,7 +61,7 @@
 .cartItem_prices {
   display: flex;
   align-items: center;
-  flex-basis: 15%;
+  flex-basis: 20%;
   gap: 30px;
 }
 .cartItem_prices span:first-child {
@@ -83,4 +83,35 @@
   color: #000;
   align-self: flex-start;
   box-shadow: none;
+}
+
+
+@media(max-width:640px){
+  .cartItem{
+    border: none;
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .cartItem:last-child{
+    border-bottom: none;
+}
+
+.cartItem_actions{
+  gap:10px;
+}
+.actions_btn  {
+  align-self: center;
+}
+.cartItem > button:last-child{
+  position: absolute;
+  right: 20px;
+  background-color: #339933;
+  color: #fff;
+}
+
+.cartItem img{
+  width: 100%;
+}
 }

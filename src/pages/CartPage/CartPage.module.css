@@ -22,9 +22,21 @@
 
 .cartPage_info ul{
   flex-basis: 60%;
- 
 }
 
 .cartPage_btn:hover {
   color: #393;
+}
+
+@media(max-width:640px){
+  .cartPage_info {
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+  }
+  .cartPage_info ul{
+    flex-basis: 100%;
+    border: none;
+  }
+  
 }

@@ -19,8 +19,8 @@ const Cartitem = ({ image, title, price, discont_price,quantity ,id}) => {
         
       </div>
       <div className={styles.cartItem_prices}>
-          <span>{discont_price ? discont_price : price}</span>
-          {discont_price ? <span>{price}</span> : null}
+          <span>{discont_price ? discont_price : price}<sub>$</sub></span>
+          {discont_price ? <span>{price}$ </span> : null}
         </div>
       <CustomButton title="X" handleClick={()=>dispatch(removeItem(id))} />
     </li>
