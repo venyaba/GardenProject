@@ -45,8 +45,14 @@
   font-weight: 600;
 }
 
-@media(max-width:480px){
+@media(max-width:480px) {
   .header{
     padding: 10px;
+  }
+}
+
+@media  (max-width:680px) {
+  .header{
+    padding: 20px;
   }
 }

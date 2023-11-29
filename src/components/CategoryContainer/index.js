@@ -36,14 +36,22 @@ const CategoryContainer = () => {
       <Swiper
         spaceBetween={32}
         breakpoints={{
-          280: {
+          400: {
             slidesPerView: 1,
             spaceBetween: 20,
           },
           640: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 20,
-          }
+          },
+          1100: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1400: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
         }}
         slidesPerView={4}
         modules={[Navigation, Pagination]}

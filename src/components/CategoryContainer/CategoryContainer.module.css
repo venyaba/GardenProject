@@ -60,3 +60,9 @@
       padding: 20px;
   }
 }
+
+@media (max-width: 740px) {
+  .categories_title {
+    padding: 20px;
+  }
+}

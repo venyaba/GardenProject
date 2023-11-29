@@ -38,3 +38,10 @@
     padding: 20px;
   }
 }
+
+
+@media (max-width: 740px) {
+  .sale_container {
+    padding: 20px;
+  }
+}

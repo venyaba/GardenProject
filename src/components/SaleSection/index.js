@@ -34,21 +34,25 @@ const SaleSection = () => {
           modules={[Navigation, Pagination]}
           className="mySwiper"
           breakpoints={{
-            280: {
+            400: {
               slidesPerView: 1,
               spaceBetween: 20,
             },
             640: {
-              slidesPerView: 4,
+              slidesPerView: 2,
               spaceBetween: 20,
+            },
+            900: {
+              slidesPerView: 3,
+              spaceBetween: 30,
             },
             1100: {
               slidesPerView: 4,
-              spaceBetween: 40,
+              spaceBetween: 30,
             },
             1400: {
               slidesPerView: 4,
-              spaceBetween: 40,
+              spaceBetween: 30,
             },
           }}
         >
