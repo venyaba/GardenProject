@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+
 import { useSelector } from "react-redux";
-import { getTotalQuantity } from "../../utils";
+
 import CartItem from "../../components/CartItem";
 import styles from "./CartPage.module.css";
 import OrderDetails from "../../components/OrderDetails";

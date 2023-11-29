@@ -66,7 +66,6 @@ export const getTotal = (cart) => {
   let totalQuantity = 0
   let totalPrice = 0
   cart.forEach(item => {
-    console.log('item', item)
     totalQuantity += item.quantity
     totalPrice += item.discont_price? item.discont_price * item.quantity: item.price * item.quantity
   })

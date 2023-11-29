@@ -31,7 +31,6 @@ export const fetchProductById = createAsyncThunk(
         throw new Error("server error");
       }
       const productDetails = await response.json();
-      console.log(productDetails)
       return productDetails;
     } catch (error) {
       return rejectWithValue(error.message);

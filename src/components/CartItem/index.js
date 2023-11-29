@@ -4,10 +4,10 @@ import styles from "./CartItem.module.css";
 import { incrementQuantity,decrementQuantity,removeItem } from "../../core/redux/store/slices/cartSlices";
 import { useDispatch } from "react-redux";
 
-const Cartitem = ({ image, title, price, discont_price,quantity ,id}) => {
+const CartItem = ({ image, title, price, discont_price,quantity ,id}) => {
     const dispatch = useDispatch()
   return (
-    <li className={styles.cartItem} key={id}>
+    <li key={id} className={styles.cartItem} >
       <img src={`${process.env.REACT_APP_ENDPOINT_URL}${image}`} />
       <div className={styles.cartItem_actions}>
         <span>{title}</span>
@@ -27,4 +27,4 @@ const Cartitem = ({ image, title, price, discont_price,quantity ,id}) => {
   );
 };
 
-export default Cartitem;
+export default CartItem;
